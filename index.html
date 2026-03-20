@@ -1,0 +1,1806 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>haruharu wonder x Select: Campaign Strategy Q2/Q3 2026</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&display=swap" rel="stylesheet">
+<style>
+:root {
+  --white: #FFFFFF;
+  --near-black: #151515;
+  --sage: #DBE7E8;
+  --sage-light: #EBF2F2;
+  --lime: #E8FF7A;
+  --lime-dim: #d4eb6e;
+  --lavender: #F5EEF7;
+  --deep-teal: #2E4E49;
+  --deep-teal-light: #3a6660;
+  --text-secondary: #65706E;
+  --text-muted: #8a9290;
+  --border: #EBEBEB;
+  --bg-light: #F8F8F8;
+  --pink-accent: #F5C6D0;
+  --pink-light: #fdf0f2;
+
+  --font-display: 'Jost', system-ui, sans-serif;
+  --font-body: 'DM Sans', system-ui, sans-serif;
+
+  --page-max: 1100px;
+  --radius: 8px;
+  --radius-lg: 12px;
+
+  --space-xs: 0.5rem;
+  --space-sm: 1rem;
+  --space-md: 1.5rem;
+  --space-lg: 2.5rem;
+  --space-xl: 4rem;
+  --space-2xl: 6rem;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; -webkit-font-smoothing: antialiased; }
+
+body {
+  font-family: var(--font-body);
+  color: var(--near-black);
+  background: var(--white);
+  line-height: 1.6;
+  font-size: clamp(0.9375rem, 0.9rem + 0.2vw, 1.0625rem);
+}
+
+.nav {
+  position: sticky; top: 0; z-index: 100;
+  background: rgba(255,255,255,0.92);
+  backdrop-filter: blur(16px) saturate(1.4);
+  -webkit-backdrop-filter: blur(16px) saturate(1.4);
+  border-bottom: 1px solid var(--border);
+}
+.nav-inner {
+  max-width: var(--page-max); margin: 0 auto;
+  display: flex; justify-content: space-between; align-items: center;
+  padding: 0 var(--space-lg); height: 52px;
+}
+.nav-brand {
+  font-family: var(--font-body);
+  font-size: 0.75rem; font-weight: 600;
+  color: var(--text-secondary); letter-spacing: 0.06em; text-transform: uppercase;
+}
+.nav-links { display: flex; gap: 2px; overflow-x: auto; scrollbar-width: none; }
+.nav-links::-webkit-scrollbar { display: none; }
+.nav-links a {
+  padding: 6px 12px; font-size: 0.6875rem; font-weight: 500;
+  color: var(--text-secondary); text-decoration: none; border-radius: 4px;
+  transition: color 0.2s, background 0.2s; white-space: nowrap;
+}
+.nav-links a:hover { color: var(--near-black); background: var(--sage-light); }
+
+.hero {
+  background: linear-gradient(165deg, var(--deep-teal) 0%, #1a3a35 40%, #0f2522 100%);
+  color: var(--white); padding: var(--space-2xl) var(--space-lg);
+  position: relative; overflow: hidden;
+}
+.hero::after {
+  content: ''; position: absolute; top: -30%; right: -10%;
+  width: 600px; height: 600px;
+  background: radial-gradient(circle, rgba(232,255,122,0.08) 0%, transparent 65%);
+  pointer-events: none;
+}
+.hero-inner { max-width: var(--page-max); margin: 0 auto; position: relative; z-index: 1; }
+.hero-eyebrow {
+  font-family: var(--font-body); font-size: 0.6875rem; font-weight: 600;
+  text-transform: uppercase; letter-spacing: 0.15em;
+  color: var(--lime); margin-bottom: var(--space-md);
+  display: flex; align-items: center; gap: 12px;
+}
+.hero-eyebrow::before { content: ''; width: 32px; height: 1px; background: var(--lime); }
+.hero h1 {
+  font-family: var(--font-display); font-weight: 400;
+  font-size: clamp(2.25rem, 2rem + 2.5vw, 3.5rem);
+  line-height: 1.1; letter-spacing: -0.02em;
+  margin-bottom: var(--space-md); max-width: 24ch;
+}
+.hero h1 em { font-style: italic; font-weight: 300; color: var(--lime); }
+.hero-sub {
+  font-size: clamp(0.9375rem, 0.9rem + 0.2vw, 1.0625rem);
+  color: rgba(219,231,232,0.7); max-width: 56ch;
+  margin-bottom: var(--space-xl); line-height: 1.7;
+}
+.hero-stats {
+  display: flex; gap: clamp(24px, 5vw, 56px); flex-wrap: wrap;
+  padding-top: var(--space-lg);
+  border-top: 1px solid rgba(255,255,255,0.1);
+}
+.hero-stat .value {
+  font-family: var(--font-display); font-weight: 300;
+  font-size: clamp(1.75rem, 1.5rem + 1.5vw, 2.75rem);
+  color: var(--lime); line-height: 1;
+}
+.hero-stat .label {
+  font-size: 0.6875rem; color: rgba(219,231,232,0.5);
+  text-transform: uppercase; letter-spacing: 0.08em; margin-top: 6px;
+}
+
+.page { max-width: var(--page-max); margin: 0 auto; padding: 0 var(--space-lg); }
+
+section { padding: var(--space-2xl) 0; scroll-margin-top: 60px; }
+section + section { border-top: 1px solid var(--border); }
+
+.section-eyebrow {
+  font-family: var(--font-body); font-size: 0.6875rem; font-weight: 600;
+  text-transform: uppercase; letter-spacing: 0.15em;
+  color: var(--deep-teal); margin-bottom: var(--space-sm);
+}
+h2 {
+  font-family: var(--font-display); font-weight: 400;
+  font-size: clamp(1.625rem, 1.4rem + 1.2vw, 2.25rem);
+  line-height: 1.15; letter-spacing: -0.015em;
+  color: var(--near-black); margin-bottom: var(--space-sm);
+}
+h2 em { font-style: italic; font-weight: 300; }
+.section-lead {
+  color: var(--text-secondary); max-width: 68ch;
+  margin-bottom: var(--space-xl); font-size: 1.0625rem; line-height: 1.7;
+}
+h3 {
+  font-family: var(--font-display); font-weight: 500;
+  font-size: clamp(1.125rem, 1rem + 0.5vw, 1.375rem);
+  color: var(--deep-teal); margin-bottom: var(--space-sm);
+  letter-spacing: -0.01em;
+}
+
+.insight {
+  background: var(--sage-light);
+  border-left: 3px solid var(--deep-teal);
+  padding: var(--space-md) var(--space-lg);
+  border-radius: 0 var(--radius) var(--radius) 0;
+  margin: var(--space-lg) 0;
+}
+.insight p { color: var(--text-secondary); margin: 0; }
+.insight strong { color: var(--near-black); }
+
+.two-col {
+  display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-xl);
+  margin: var(--space-lg) 0;
+}
+@media (max-width: 700px) { .two-col { grid-template-columns: 1fr; } }
+
+.stats-row {
+  display: flex; gap: var(--space-lg); flex-wrap: wrap;
+  padding: var(--space-lg) 0;
+}
+.stat-item { flex: 1; min-width: 140px; }
+.stat-item .stat-value {
+  font-family: var(--font-display); font-weight: 400;
+  font-size: clamp(1.5rem, 1.3rem + 1vw, 2rem);
+  color: var(--deep-teal); line-height: 1;
+}
+.stat-item .stat-label {
+  font-size: 0.75rem; color: var(--text-muted);
+  text-transform: uppercase; letter-spacing: 0.06em; margin-top: 4px;
+}
+
+.product-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: var(--space-lg);
+  transition: transform 0.2s ease;
+}
+.product-card:hover { transform: translateY(-2px); }
+.product-card.mist { border-top: 3px solid var(--pink-accent); }
+.product-card.essence { border-top: 3px solid var(--deep-teal); }
+.product-img-wrap {
+  display: flex; justify-content: center; align-items: center;
+  padding: var(--space-md) 0 var(--space-sm);
+}
+.product-img-wrap img {
+  height: 220px; width: auto; object-fit: contain;
+  filter: drop-shadow(0 8px 24px rgba(46,78,73,0.1));
+  transition: transform 0.3s ease;
+}
+.product-img-wrap img:hover { transform: scale(1.05); }
+.product-badge {
+  display: inline-block; font-size: 0.625rem; font-weight: 700;
+  text-transform: uppercase; letter-spacing: 0.08em;
+  padding: 3px 10px; border-radius: 20px; margin-bottom: var(--space-sm);
+}
+.badge-new { background: var(--lime); color: var(--deep-teal); }
+.badge-best { background: var(--deep-teal); color: var(--white); }
+.product-name {
+  font-family: var(--font-display); font-weight: 500;
+  font-size: 1.25rem; margin-bottom: var(--space-xs);
+}
+.product-price {
+  font-family: var(--font-display); font-weight: 400;
+  font-size: 1.5rem; color: var(--deep-teal); margin-bottom: var(--space-sm);
+}
+.product-detail { font-size: 0.875rem; color: var(--text-secondary); line-height: 1.6; margin-bottom: var(--space-xs); }
+.product-tags { display: flex; gap: 6px; flex-wrap: wrap; margin-top: var(--space-sm); }
+.product-tag {
+  font-size: 0.625rem; font-weight: 600; padding: 3px 10px;
+  border-radius: 20px; text-transform: uppercase; letter-spacing: 0.04em;
+  background: var(--sage-light); color: var(--deep-teal);
+}
+
+.tier-group { margin-bottom: var(--space-xl); }
+.tier-label {
+  font-family: var(--font-body); font-size: 0.6875rem; font-weight: 600;
+  text-transform: uppercase; letter-spacing: 0.12em;
+  padding: 4px 14px; border-radius: 20px; display: inline-block;
+  margin-bottom: var(--space-md);
+}
+.tier-premium { background: var(--lime); color: var(--deep-teal); }
+.tier-core { background: var(--sage); color: var(--deep-teal); }
+.tier-discovery { background: var(--lavender); color: #6b5b7b; }
+.tier-desc {
+  color: var(--text-secondary); font-size: 0.9375rem; max-width: 68ch;
+  margin-bottom: var(--space-lg); line-height: 1.6;
+}
+
+.creator-card {
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  margin-bottom: var(--space-md);
+  overflow: hidden;
+  transition: box-shadow 0.25s ease, border-color 0.25s ease;
+  background: white;
+}
+.creator-card:hover {
+  box-shadow: 0 4px 24px rgba(46,78,73,0.08);
+  border-color: var(--sage);
+}
+
+.creator-summary {
+  display: grid;
+  grid-template-columns: 64px 1fr auto;
+  gap: var(--space-md);
+  padding: var(--space-md) var(--space-lg);
+  align-items: center;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+.creator-summary:hover { background: var(--sage-light); }
+
+.creator-initial {
+  width: 64px; height: 64px;
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-family: var(--font-display); font-weight: 400;
+  font-size: 1.25rem; color: var(--white);
+  flex-shrink: 0;
+}
+.initial-premium { background: var(--deep-teal); }
+.initial-core { background: #5a8a84; }
+.initial-discovery { background: #8b7b9b; }
+.creator-photo {
+  width: 64px; height: 64px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+  border: 2px solid var(--border);
+  transition: border-color 0.2s;
+}
+.creator-card:hover .creator-photo { border-color: var(--sage); }
+
+.creator-summary-info { min-width: 0; }
+.creator-name-row {
+  display: flex; align-items: baseline; gap: var(--space-sm);
+  flex-wrap: wrap; margin-bottom: 2px;
+}
+.creator-name {
+  font-family: var(--font-display); font-weight: 600;
+  font-size: 1.125rem; color: var(--near-black);
+}
+.creator-reach-inline {
+  font-family: var(--font-display); font-weight: 400;
+  font-size: 1.125rem; color: var(--deep-teal);
+}
+.creator-platform-line { font-size: 0.8125rem; color: var(--text-muted); margin-top: 2px; }
+.creator-one-liner { font-size: 0.875rem; color: var(--text-secondary); margin-top: 4px; line-height: 1.5; }
+
+.creator-tags { display: flex; gap: 4px; flex-wrap: wrap; margin-top: 6px; }
+.creator-tag {
+  font-size: 0.5625rem; font-weight: 600; padding: 2px 8px;
+  border-radius: 20px; text-transform: uppercase; letter-spacing: 0.04em;
+}
+.tag-kbeauty { background: var(--sage-light); color: var(--deep-teal); }
+.tag-wellness { background: #eef5e6; color: #4a6b3a; }
+.tag-entertainment { background: var(--lavender); color: #6b5b7b; }
+.tag-inclusive { background: #fef3e2; color: #8a6b3a; }
+.tag-korean { background: #e8eef5; color: #3a4b6b; }
+
+.expand-toggle {
+  width: 32px; height: 32px; flex-shrink: 0;
+  display: flex; align-items: center; justify-content: center;
+  border-radius: 50%; border: 1px solid var(--border);
+  background: var(--white); color: var(--text-muted);
+  transition: all 0.25s ease; font-size: 0.875rem;
+  cursor: pointer;
+}
+.expand-toggle:hover { border-color: var(--deep-teal); color: var(--deep-teal); }
+.creator-card.open .expand-toggle {
+  transform: rotate(180deg);
+  background: var(--deep-teal); color: var(--white); border-color: var(--deep-teal);
+}
+
+.creator-detail {
+  max-height: 0; overflow: hidden;
+  transition: max-height 0.4s ease, padding 0.3s ease;
+  padding: 0 var(--space-lg);
+}
+.creator-card.open .creator-detail {
+  max-height: 2000px;
+  padding: 0 var(--space-lg) var(--space-lg);
+  border-top: 1px solid var(--border);
+}
+
+.detail-grid {
+  display: grid; grid-template-columns: 1fr 1fr;
+  gap: var(--space-lg); padding-top: var(--space-lg);
+}
+@media (max-width: 700px) { .detail-grid { grid-template-columns: 1fr; } }
+
+.detail-section h4 {
+  font-family: var(--font-body); font-weight: 600;
+  font-size: 0.6875rem; text-transform: uppercase;
+  letter-spacing: 0.1em; color: var(--deep-teal);
+  margin-bottom: var(--space-xs);
+}
+.detail-section p {
+  font-size: 0.875rem; color: var(--text-secondary); line-height: 1.65;
+  margin-bottom: var(--space-sm);
+}
+
+.rate-grid {
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+  gap: 8px; margin-top: var(--space-xs);
+}
+.rate-item {
+  background: var(--sage-light); border-radius: var(--radius);
+  padding: 10px 14px; font-size: 0.8125rem;
+}
+.rate-item .rate-platform {
+  font-size: 0.5625rem; font-weight: 600; text-transform: uppercase;
+  letter-spacing: 0.06em; color: var(--text-muted); margin-bottom: 2px;
+}
+.rate-item .rate-value {
+  font-family: var(--font-display); font-weight: 500;
+  font-size: 1rem; color: var(--deep-teal);
+}
+.rate-note {
+  font-size: 0.75rem; color: var(--text-muted); font-style: italic;
+  margin-top: var(--space-xs);
+}
+
+.bundle-highlight {
+  background: linear-gradient(135deg, var(--sage-light), var(--sage));
+  border-radius: var(--radius);
+  padding: var(--space-md);
+  margin-top: var(--space-sm);
+}
+.bundle-highlight .bundle-label {
+  font-size: 0.625rem; font-weight: 700; text-transform: uppercase;
+  letter-spacing: 0.08em; color: var(--deep-teal); margin-bottom: 4px;
+}
+.bundle-highlight .bundle-price {
+  font-family: var(--font-display); font-weight: 500;
+  font-size: 1.25rem; color: var(--deep-teal);
+}
+.bundle-highlight .bundle-desc {
+  font-size: 0.8125rem; color: var(--text-secondary); margin-top: 4px;
+}
+
+.links-row { display: flex; gap: 8px; margin-top: var(--space-sm); flex-wrap: wrap; }
+.links-row a {
+  font-size: 0.6875rem; font-weight: 600; text-transform: uppercase;
+  letter-spacing: 0.04em; padding: 4px 12px; border-radius: 20px;
+  background: var(--bg-light); color: var(--text-secondary);
+  text-decoration: none; border: 1px solid var(--border);
+  transition: all 0.2s;
+}
+.links-row a:hover { background: var(--deep-teal); color: var(--white); border-color: var(--deep-teal); }
+
+.flights-grid { display: grid; gap: var(--space-md); margin: var(--space-lg) 0; }
+.flight-card {
+  padding: var(--space-lg);
+  background: var(--bg-light);
+  border-radius: var(--radius-lg);
+  border-left: 4px solid var(--deep-teal);
+  transition: transform 0.2s ease;
+}
+.flight-card:hover { transform: translateX(4px); }
+.flight-card.flight-science { border-left-color: var(--lime-dim); }
+.flight-card.flight-retail { border-left-color: var(--deep-teal); }
+.flight-card.flight-ritual { border-left-color: #c4a6d4; }
+.flight-card.flight-heritage { border-left-color: var(--pink-accent); }
+.flight-card.flight-inclusive { border-left-color: #d4b896; }
+
+.flight-number {
+  font-family: var(--font-display); font-weight: 300;
+  font-size: 2rem; color: var(--border); line-height: 1;
+  margin-bottom: var(--space-xs);
+}
+.flight-card h4 {
+  font-family: var(--font-display); font-weight: 600;
+  font-size: 1.0625rem; color: var(--near-black);
+  margin-bottom: var(--space-xs);
+}
+.flight-card p { font-size: 0.875rem; color: var(--text-secondary); margin: 0 0 var(--space-sm); line-height: 1.65; }
+.flight-hook {
+  font-size: 0.875rem; color: var(--deep-teal); font-style: italic;
+  border-left: 2px solid var(--lime);
+  padding-left: var(--space-sm); margin: var(--space-sm) 0;
+}
+.flight-creators {
+  font-size: 0.75rem; color: var(--text-muted); margin-top: var(--space-sm);
+  text-transform: uppercase; letter-spacing: 0.04em;
+}
+.flight-product-tag {
+  display: inline-block; font-size: 0.5625rem; font-weight: 700;
+  padding: 2px 8px; border-radius: 20px; text-transform: uppercase;
+  letter-spacing: 0.04em; margin-right: 4px;
+}
+.fpt-mist { background: var(--pink-light); color: #9a6b7b; }
+.fpt-essence { background: var(--sage-light); color: var(--deep-teal); }
+.fpt-both { background: var(--lavender); color: #6b5b7b; }
+
+.bundle-card {
+  padding: var(--space-lg);
+  border-radius: var(--radius-lg);
+  margin-bottom: var(--space-md);
+  position: relative;
+  transition: transform 0.2s ease;
+  border: 1px solid var(--border);
+}
+.bundle-card:hover { transform: translateY(-2px); }
+.bundle-card.bundle-featured {
+  background: linear-gradient(135deg, var(--deep-teal) 0%, #1a3a35 100%);
+  color: var(--white); border: none;
+}
+.bundle-card.bundle-featured h4 { color: var(--lime); }
+.bundle-card.bundle-featured p { color: rgba(219,231,232,0.7); }
+.bundle-card.bundle-featured .bundle-total { color: var(--lime); }
+.bundle-card.bundle-featured .bundle-meta { color: rgba(219,231,232,0.5); }
+.bundle-card.bundle-featured .bundle-creator-list { color: rgba(219,231,232,0.6); }
+
+.bundle-card h4 {
+  font-family: var(--font-display); font-weight: 600;
+  font-size: 1.125rem; color: var(--near-black);
+  margin-bottom: var(--space-xs);
+}
+.bundle-total {
+  font-family: var(--font-display); font-weight: 400;
+  font-size: 1.75rem; color: var(--deep-teal); margin-bottom: var(--space-xs);
+}
+.bundle-meta {
+  font-size: 0.75rem; color: var(--text-muted);
+  text-transform: uppercase; letter-spacing: 0.04em;
+  margin-bottom: var(--space-sm);
+}
+.bundle-card p { font-size: 0.875rem; color: var(--text-secondary); line-height: 1.65; margin-bottom: var(--space-sm); }
+.bundle-creator-list {
+  font-size: 0.8125rem; color: var(--text-muted); line-height: 1.6;
+}
+
+.scenario-card {
+  padding: var(--space-xl) var(--space-lg);
+  border-radius: var(--radius-lg);
+  margin-bottom: var(--space-lg);
+  position: relative;
+  transition: transform 0.2s ease;
+}
+.scenario-card:hover { transform: translateY(-2px); }
+.scenario-card.scenario-1 { background: var(--bg-light); border: 1px solid var(--border); }
+.scenario-card.scenario-2 {
+  background: linear-gradient(135deg, var(--sage-light), var(--sage));
+  border: 1px solid var(--sage);
+}
+.scenario-card.scenario-3 {
+  background: linear-gradient(135deg, var(--deep-teal) 0%, #1a3a35 100%);
+  color: var(--white); border: none;
+}
+.scenario-card.scenario-3 h3 { color: var(--lime); }
+.scenario-card.scenario-3 p { color: rgba(219,231,232,0.7); }
+.scenario-card.scenario-3 li { color: rgba(219,231,232,0.7); }
+.scenario-card.scenario-3 .scenario-amount { color: var(--lime); }
+.scenario-card.scenario-3 .scenario-label { color: rgba(219,231,232,0.5); }
+
+.scenario-header {
+  display: flex; justify-content: space-between; align-items: baseline;
+  margin-bottom: var(--space-md); flex-wrap: wrap; gap: var(--space-sm);
+}
+.scenario-amount {
+  font-family: var(--font-display); font-weight: 400;
+  font-size: clamp(1.5rem, 1.3rem + 1vw, 2rem);
+  color: var(--deep-teal);
+}
+.scenario-label {
+  font-size: 0.6875rem; color: var(--text-muted);
+  text-transform: uppercase; letter-spacing: 0.08em;
+}
+.scenario-card ul {
+  list-style: none; padding: 0;
+}
+.scenario-card li {
+  font-size: 0.875rem; color: var(--text-secondary); line-height: 1.8;
+  padding-left: 1.25em; position: relative;
+}
+.scenario-card li::before {
+  content: ''; position: absolute; left: 0; top: 0.65em;
+  width: 6px; height: 6px; border-radius: 50%;
+  background: var(--deep-teal);
+}
+.scenario-card.scenario-3 li::before { background: var(--lime); }
+
+.timeline-grid {
+  display: grid;
+  grid-template-columns: 80px repeat(12, 1fr);
+  gap: 2px;
+  margin: var(--space-lg) 0;
+  font-size: 0.6875rem;
+}
+.tl-header {
+  background: var(--deep-teal); color: var(--white);
+  padding: 8px 6px; text-align: center; font-weight: 600;
+  text-transform: uppercase; letter-spacing: 0.04em;
+}
+.tl-label {
+  background: var(--bg-light); padding: 8px 10px;
+  font-weight: 600; color: var(--near-black);
+  display: flex; align-items: center;
+  border-right: 2px solid var(--sage);
+}
+.tl-cell {
+  background: var(--bg-light); padding: 8px 4px; text-align: center;
+  color: var(--text-muted);
+}
+.tl-active {
+  background: var(--sage); color: var(--deep-teal); font-weight: 600;
+}
+.tl-active-strong {
+  background: var(--deep-teal); color: var(--lime); font-weight: 600;
+}
+.tl-seeding { background: var(--lavender); color: #6b5b7b; font-weight: 500; }
+
+.seeding-grid {
+  display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: var(--space-md); margin: var(--space-lg) 0;
+}
+.seeding-card {
+  background: var(--bg-light); border: 1px solid var(--border);
+  border-radius: var(--radius); padding: var(--space-md);
+}
+.seeding-card .seed-name {
+  font-family: var(--font-display); font-weight: 600;
+  font-size: 1rem; margin-bottom: 4px;
+}
+.seeding-card .seed-reach {
+  font-size: 0.75rem; color: var(--text-muted); margin-bottom: var(--space-xs);
+}
+.seeding-card .seed-desc {
+  font-size: 0.8125rem; color: var(--text-secondary); line-height: 1.5;
+}
+
+.next-steps-list { list-style: none; padding: 0; counter-reset: step; }
+.next-steps-list li {
+  font-size: 1rem; color: var(--near-black); line-height: 1.6;
+  padding: var(--space-md) 0; border-bottom: 1px solid var(--border);
+  padding-left: 3em; position: relative;
+  counter-increment: step;
+}
+.next-steps-list li::before {
+  content: counter(step);
+  position: absolute; left: 0; top: var(--space-md);
+  font-family: var(--font-display); font-weight: 600;
+  font-size: 1.25rem; color: var(--deep-teal);
+  width: 2em; text-align: center;
+}
+
+footer {
+  background: var(--deep-teal); color: rgba(219,231,232,0.5);
+  padding: var(--space-lg);
+  text-align: center; font-size: 0.75rem;
+  margin-top: var(--space-2xl);
+}
+footer strong { color: var(--lime); }
+
+.sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0,0,0,0); }
+@media (max-width: 700px) {
+  .hero-stats { gap: 24px; }
+  .creator-summary { grid-template-columns: 48px 1fr auto; gap: var(--space-sm); }
+  .creator-initial { width: 48px; height: 48px; font-size: 1rem; }
+  .timeline-grid { font-size: 0.5625rem; }
+  .tl-label { font-size: 0.5625rem; padding: 6px; }
+}
+
+/* --- PASSWORD GATE --- */
+.gate {
+  position: fixed; inset: 0; z-index: 9999;
+  background: var(--deep-teal, #2E4E49);
+  display: flex; align-items: center; justify-content: center;
+  flex-direction: column; gap: 1.5rem;
+  font-family: 'DM Sans', system-ui, sans-serif;
+  transition: opacity 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.gate.unlocked { opacity: 0; pointer-events: none; }
+.gate-brand {
+  font-family: 'DM Sans', system-ui, sans-serif;
+  font-size: 0.6875rem; font-weight: 500;
+  text-transform: uppercase; letter-spacing: 0.2em;
+  color: rgba(219,231,232,0.4);
+}
+.gate-title {
+  font-family: 'Jost', system-ui, sans-serif;
+  font-size: clamp(1.75rem, 1.5rem + 2vw, 3rem);
+  color: #fff;
+  letter-spacing: -0.02em; line-height: 1.1;
+  text-align: center;
+}
+.gate-title em { font-style: italic; font-weight: 300; color: var(--lime, #E8FF7A); }
+.gate-form { display: flex; gap: 0; margin-top: 0.5rem; }
+.gate-input {
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.15);
+  border-right: none;
+  color: #fff;
+  font-family: 'DM Sans', system-ui, sans-serif;
+  font-size: 0.9375rem; padding: 0.75rem 1.25rem;
+  outline: none; width: 240px;
+  -webkit-appearance: none;
+  border-radius: 6px 0 0 6px;
+}
+.gate-input::placeholder { color: rgba(255,255,255,0.25); }
+.gate-input:focus { border-color: var(--lime, #E8FF7A); }
+.gate-btn {
+  background: var(--lime, #E8FF7A);
+  color: var(--deep-teal, #2E4E49);
+  border: none; padding: 0.75rem 1.5rem;
+  font-family: 'Jost', system-ui, sans-serif;
+  font-size: 0.875rem; font-weight: 600; letter-spacing: 0.04em;
+  cursor: pointer; transition: background 0.2s;
+  border-radius: 0 6px 6px 0;
+}
+.gate-btn:hover { background: #d4eb6e; }
+.gate-error {
+  font-size: 0.75rem; color: #F5C6D0;
+  height: 1rem;
+}
+.gate-hint {
+  font-size: 0.6875rem; color: rgba(219,231,232,0.25);
+  margin-top: 1rem;
+}
+
+</style>
+</head>
+<body>
+
+<!-- PASSWORD GATE -->
+<div id="gate" class="gate">
+  <div class="gate-brand">Select Management</div>
+  <div class="gate-title">haruharu wonder <em>x</em> Select</div>
+  <form class="gate-form" onsubmit="return unlock(event)">
+    <input id="pw" class="gate-input" type="password" placeholder="Access code" autocomplete="off" autofocus>
+    <button class="gate-btn" type="submit">Enter</button>
+  </form>
+  <div id="gate-error" class="gate-error"></div>
+  <div class="gate-hint">Contact tom.partners@select.co for access</div>
+</div>
+
+
+<!-- NAV -->
+<nav class="nav">
+  <div class="nav-inner">
+    <span class="nav-brand">haruharu wonder <span style="color:var(--text-muted)">x</span> select</span>
+    <div class="nav-links">
+      <a href="#opportunity">Opportunity</a>
+      <a href="#products">Products</a>
+      <a href="#roster">Roster</a>
+      <a href="#seeding">Seeding</a>
+      <a href="#flights">Flights</a>
+      <a href="#bundles">Bundles</a>
+      <a href="#investment">Investment</a>
+      <a href="#timeline">Timeline</a>
+      <a href="#next">Next Steps</a>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<header class="hero">
+  <div class="hero-inner">
+    <div class="hero-eyebrow">Campaign Strategy Q2/Q3 2026</div>
+    <h1>haruharu wonder <em>x</em> Select</h1>
+    <p class="hero-sub">
+      A multi-platform creator campaign to amplify haruharu wonder's U.S. expansion across Target and Amazon,
+      built around the "day by day" philosophy of slow beauty, science-backed formulations, and authentic storytelling.
+    </p>
+    <div class="hero-stats">
+      <div class="hero-stat">
+        <div class="value">12</div>
+        <div class="label">Paid Creators</div>
+      </div>
+      <div class="hero-stat">
+        <div class="value">36M+</div>
+        <div class="label">Combined Reach</div>
+      </div>
+      <div class="hero-stat">
+        <div class="value">3</div>
+        <div class="label">Platforms</div>
+      </div>
+      <div class="hero-stat">
+        <div class="value">$250K+</div>
+        <div class="label">Campaign Investment</div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main class="page">
+
+<!-- SECTION: OPPORTUNITY -->
+<section id="opportunity">
+  <div class="section-eyebrow">The Opportunity</div>
+  <h2>haruharu wonder is <em>accelerating</em></h2>
+  <p class="section-lead">
+    From Seoul to Target shelves nationwide, haruharu wonder is building one of the most compelling K-beauty expansion stories in the U.S. market. With patented Black Rice fermentation technology, award-winning design, and now a breakthrough NAD+ innovation, the brand is positioned to become a household name.
+  </p>
+  <div class="stats-row">
+    <div class="stat-item">
+      <div class="stat-value">$360M</div>
+      <div class="stat-label">2025 Revenue</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-value">$600M</div>
+      <div class="stat-label">2026 Target</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-value">67%</div>
+      <div class="stat-label">YoY Growth</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-value">7,000+</div>
+      <div class="stat-label">Units Sold (BF 2025)</div>
+    </div>
+  </div>
+  <div class="insight">
+    <p><strong>Why now:</strong> K-beauty is experiencing a second wave at U.S. retail. Sephora, Ulta, and Target are all expanding their K-beauty shelves. haruharu wonder's sub-$28 pricing, vegan certifications, and NAD+ innovation position it uniquely at the intersection of science, accessibility, and cultural relevance.</p>
+  </div>
+  <div class="stats-row" style="padding-top: var(--space-sm);">
+    <div class="stat-item">
+      <div class="stat-value" style="font-size: 1rem; color: var(--text-secondary); font-weight: 400;">Vegan Society &bull; PETA Certified &bull; EVE Vegan &bull; iF Design Award &bull; Red Dot Award &bull; Braille on Packaging</div>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION: PRODUCTS -->
+<section id="products">
+  <div class="section-eyebrow">Two Products, Two Stories</div>
+  <h2>Innovation meets <em>trust</em></h2>
+  <p class="section-lead">
+    This campaign centers on two hero products with distinct roles: the NAD+ Mist drives innovation-led awareness, while the Barrier Essence anchors trust and retail conversion at Target.
+  </p>
+  <div class="two-col">
+    <div class="product-card mist">
+      <div class="product-img-wrap">
+        <img src="images/nad-mist.webp" alt="haruharu wonder Black Rice Probiotics Barrier 2% NAD+ Serum Mist">
+      </div>
+      <span class="product-badge badge-new">New Launch</span>
+      <div class="product-name">Barrier 2% NAD+ Serum Mist</div>
+      <div class="product-price">$22 <span style="font-size:0.75rem;color:var(--text-muted);font-weight:400;">/ 80ml</span></div>
+      <p class="product-detail"><strong>Distribution:</strong> Amazon exclusive (US &amp; UK)</p>
+      <p class="product-detail"><strong>The hook:</strong> NAD+ is the longevity molecule celebrities pay $500+ per IV drip session for. haruharu wonder put 2% concentration in a $22 mist. "IV drip results without the needle."</p>
+      <p class="product-detail"><strong>Key ingredients:</strong> 2% NAD+, 5 Ceramide Complex, Black Rice Ferment, Galactomyces Filtrate</p>
+      <p class="product-detail"><strong>Press:</strong> Grazia called it "a supercharger for your skin." NAD+ levels drop 50% by age 40, and this targets that biology directly.</p>
+      <div class="product-tags">
+        <span class="product-tag">Amazon Exclusive</span>
+        <span class="product-tag">Science-Led</span>
+        <span class="product-tag">Wellness Crossover</span>
+      </div>
+    </div>
+    <div class="product-card essence">
+      <div class="product-img-wrap">
+        <img src="images/barrier-essence.webp" alt="haruharu wonder Black Rice Probiotics Barrier Essence">
+      </div>
+      <span class="product-badge badge-best">Bestseller</span>
+      <div class="product-name">Probiotics Barrier Essence</div>
+      <div class="product-price">$28 <span style="font-size:0.75rem;color:var(--text-muted);font-weight:400;">/ 120ml</span></div>
+      <p class="product-detail"><strong>Distribution:</strong> Target nationwide + Amazon + DTC</p>
+      <p class="product-detail"><strong>The hook:</strong> Marie Claire Skin Awards 2025 Winner. A complete 5-ceramide + probiotics barrier repair essence at mass-market pricing. The gateway product to K-beauty layering.</p>
+      <p class="product-detail"><strong>Key ingredients:</strong> 5 Ceramides (NP, NS, AS, AP, EOP), Probiotics (Galactomyces + Bifida), Black Rice Extract, Panthenol, Squalane</p>
+      <p class="product-detail"><strong>Performance:</strong> 7,000+ units sold during Amazon Black Friday 2025. Featured in Allure, Vogue, Cosmopolitan, Marie Claire, Elle.</p>
+      <div class="product-tags">
+        <span class="product-tag">Target Nationwide</span>
+        <span class="product-tag">Award-Winning</span>
+        <span class="product-tag">Barrier Repair</span>
+      </div>
+    </div>
+  </div>
+  <div class="insight">
+    <p><strong>Campaign role differentiation:</strong> The NAD+ Mist is the "what's new": it drives curiosity, science conversation, and Amazon conversion. The Barrier Essence is the "what works": it drives Target foot traffic, daily routine integration, and long-term brand loyalty. Together, they tell the complete haruharu wonder story.</p>
+  </div>
+</section>
+
+<!-- SECTION: ROSTER -->
+<section id="roster">
+  <div class="section-eyebrow">The Roster</div>
+  <h2>12 creators, <em>one story</em></h2>
+  <p class="section-lead">
+    Every creator on this roster brings a distinct voice, audience, and platform strength, but together they form a unified "Brand Family" that can create collective momentum across Q2 and Q3. Full rate breakdowns included for each creator.
+  </p>
+
+  <!-- PREMIUM TIER -->
+  <div class="tier-group">
+    <span class="tier-label tier-premium">Premium Tier</span>
+    <p class="tier-desc">High-reach anchors who set the campaign tone and generate the initial wave of awareness.</p>
+
+    <!-- Michelle Choi -->
+    <div class="creator-card" onclick="this.classList.toggle('open')">
+      <div class="creator-summary">
+        <img class="creator-photo" src="images/creators/michelle-choi.png" alt="Michelle Choi">
+        <div class="creator-summary-info">
+          <div class="creator-name-row">
+            <span class="creator-name">Michelle Choi</span>
+            <span class="creator-reach-inline">3.1M+</span>
+          </div>
+          <div class="creator-platform-line">675K IG &bull; 80K TT &bull; 2.3M YT &bull; New York, NY</div>
+          <div class="creator-one-liner">Korean-American lifestyle creator. "Living Alone Diaries" series. One of YouTube's most loyal lifestyle audiences.</div>
+          <div class="creator-tags">
+            <span class="creator-tag tag-korean">Korean-American</span>
+            <span class="creator-tag tag-kbeauty">K-Beauty Authority</span>
+          </div>
+        </div>
+        <div class="expand-toggle">&#9662;</div>
+      </div>
+      <div class="creator-detail">
+        <div class="detail-grid">
+          <div class="detail-section">
+            <h4>About</h4>
+            <p>Michelle is a 30-year-old vlogger and entrepreneur made popular through her "Living Alone Diaries" on YouTube. Skincare is woven into her daily content: viewers see products in real routines, not staged ads. Her Korean-American identity creates natural cultural resonance for K-beauty brands.</p>
+            <h4>Brand History</h4>
+            <p>Beauty of Joseon, Axis-Y, Torriden, VT Cosmetics, Rejuran. Proven K-beauty partnership track record with audience trust in her recommendations.</p>
+          </div>
+          <div class="detail-section">
+            <h4>Rate Card</h4>
+            <div class="rate-grid">
+              <div class="rate-item"><div class="rate-platform">IG Reel</div><div class="rate-value">$25,000</div></div>
+              <div class="rate-item"><div class="rate-platform">IG Story Set (3x)</div><div class="rate-value">$10,000</div></div>
+              <div class="rate-item"><div class="rate-platform">TikTok Video</div><div class="rate-value">$10,000</div></div>
+              <div class="rate-item"><div class="rate-platform">YT :60s Integration</div><div class="rate-value">$30,000</div></div>
+              <div class="rate-item"><div class="rate-platform">YT Short</div><div class="rate-value">$15,000</div></div>
+            </div>
+            <div class="bundle-highlight">
+              <div class="bundle-label">Recommended Bundles</div>
+              <div class="bundle-price">$30,000</div>
+              <div class="bundle-desc">IG Reel + TikTok Video, or IG Reel + IG Story Set</div>
+            </div>
+            <div class="rate-note">Pending usage rights and exclusivity terms</div>
+          </div>
+        </div>
+        <div class="links-row">
+          <a href="https://www.instagram.com/michellechoii/?hl=en" target="_blank">Instagram</a>
+          <a href="https://www.youtube.com/@michellechoii" target="_blank">YouTube</a>
+          <a href="https://app.usefoam.com/shared/media-kits/3a51ec08-9445-4839-b46c-e84a342b2cee" target="_blank">Media Kit</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Heart Defensor -->
+    <div class="creator-card" onclick="this.classList.toggle('open')">
+      <div class="creator-summary">
+        <img class="creator-photo" src="images/creators/heart-defensor.jpg" alt="Heart Defensor">
+        <div class="creator-summary-info">
+          <div class="creator-name-row">
+            <span class="creator-name">Heart Defensor</span>
+            <span class="creator-reach-inline">8.2M+</span>
+          </div>
+          <div class="creator-platform-line">1.5M IG &bull; 4.1M TT &bull; 2.6M YT &bull; Irvine, CA</div>
+          <div class="creator-one-liner">Filipina American beauty powerhouse. "Da Fam" community. Highest reach on this roster across all three platforms.</div>
+          <div class="creator-tags">
+            <span class="creator-tag tag-kbeauty">Beauty Authority</span>
+            <span class="creator-tag tag-inclusive">AAPI Creator</span>
+          </div>
+        </div>
+        <div class="expand-toggle">&#9662;</div>
+      </div>
+      <div class="creator-detail">
+        <div class="detail-grid">
+          <div class="detail-section">
+            <h4>About</h4>
+            <p>Heart has built a global fan base through beauty hauls, tutorials, and nail art. Her community ("Da Fam") is deeply loyal and consistently drives strong engagement across all three platforms. From early YouTube days to multi-platform powerhouse, Heart creates events around product discoveries.</p>
+            <h4>Brand History</h4>
+            <p>e.l.f. Cosmetics (signature highlighter collaboration). Extensive beauty brand partnerships spanning skincare, makeup, and haircare.</p>
+          </div>
+          <div class="detail-section">
+            <h4>Rate Card</h4>
+            <div class="rate-grid">
+              <div class="rate-item"><div class="rate-platform">IG Reel</div><div class="rate-value">$15,000&ndash;$20,000</div></div>
+              <div class="rate-item"><div class="rate-platform">IG Story Set (3x)</div><div class="rate-value">$8,000&ndash;$10,000</div></div>
+              <div class="rate-item"><div class="rate-platform">TikTok Video</div><div class="rate-value">$20,000</div></div>
+            </div>
+            <div class="bundle-highlight">
+              <div class="bundle-label">Full Short-Form Package</div>
+              <div class="bundle-price">$25,000&ndash;$30,000</div>
+              <div class="bundle-desc">IG Reel + TikTok Video + IG Story Set</div>
+            </div>
+            <div class="rate-note">Pending usage rights and exclusivity terms</div>
+          </div>
+        </div>
+        <div class="links-row">
+          <a href="http://instagram.com/thatsheart" target="_blank">Instagram</a>
+          <a href="http://youtube.com/user/ThatsHeartTV" target="_blank">YouTube</a>
+          <a href="https://app.usefoam.com/shared/media-kits/37487d90-8bb2-4acf-a0db-0674ef672f36" target="_blank">Media Kit</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Miki Rai -->
+    <div class="creator-card" onclick="this.classList.toggle('open')">
+      <div class="creator-summary">
+        <img class="creator-photo" src="images/creators/miki-rai.jpg" alt="Miki Rai">
+        <div class="creator-summary-info">
+          <div class="creator-name-row">
+            <span class="creator-name">Miki Rai</span>
+            <span class="creator-reach-inline">4.8M+</span>
+          </div>
+          <div class="creator-platform-line">913K IG &bull; 2.5M TT &bull; 1.4M YT &bull; Seattle, WA</div>
+          <div class="creator-one-liner">Registered Nurse + AAPI creator. Blends health education with beauty. The only creator here who can credibly explain NAD+ science.</div>
+          <div class="creator-tags">
+            <span class="creator-tag tag-wellness">RN / Wellness</span>
+            <span class="creator-tag tag-kbeauty">K-Beauty Proven</span>
+          </div>
+        </div>
+        <div class="expand-toggle">&#9662;</div>
+      </div>
+      <div class="creator-detail">
+        <div class="detail-grid">
+          <div class="detail-section">
+            <h4>About</h4>
+            <p>Miki is a Registered Nurse and leading AAPI creator. UCLA nursing graduate. Her healthcare background gives skincare content science-informed credibility. Content blends self-care routines, product testing, and health-conscious lifestyle. She can explain NAD+ cellular biology in ways that educate, not just promote.</p>
+            <h4>Brand History</h4>
+            <p>Laneige, Banila Co. Proven K-beauty partnership track record with health + beauty crossover audience.</p>
+          </div>
+          <div class="detail-section">
+            <h4>Rate Card</h4>
+            <div class="rate-grid">
+              <div class="rate-item"><div class="rate-platform">IG Reel</div><div class="rate-value">$25,000</div></div>
+              <div class="rate-item"><div class="rate-platform">IG Story Set (3x)</div><div class="rate-value">$9,000</div></div>
+              <div class="rate-item"><div class="rate-platform">TikTok Video</div><div class="rate-value">$20,000</div></div>
+              <div class="rate-item"><div class="rate-platform">YT :60s Integration</div><div class="rate-value">$10,000</div></div>
+              <div class="rate-item"><div class="rate-platform">YT Dedicated</div><div class="rate-value">$40,000</div></div>
+            </div>
+            <div class="bundle-highlight">
+              <div class="bundle-label">Full Multi-Platform Package</div>
+              <div class="bundle-price">$90,000</div>
+              <div class="bundle-desc">All platforms — IG Reel + TT Video + YT Integration + Stories + YT Dedicated</div>
+            </div>
+            <div class="rate-note">Pending usage rights and exclusivity terms. Short-form only bundle available on request.</div>
+          </div>
+        </div>
+        <div class="links-row">
+          <a href="https://www.instagram.com/mikirai/" target="_blank">Instagram</a>
+          <a href="https://www.youtube.com/channel/UC3f6OYvhpV-pmTYgikEbF1g" target="_blank">YouTube</a>
+          <a href="https://app.usefoam.com/shared/media-kits/13be413d-3b76-48b0-b9cd-75ffb8a791dc" target="_blank">Media Kit</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Erin Dugan Jurchak -->
+    <div class="creator-card" onclick="this.classList.toggle('open')">
+      <div class="creator-summary">
+        <img class="creator-photo" src="images/creators/erin-dugan-jurchak.jpg" alt="Erin Dugan Jurchak">
+        <div class="creator-summary-info">
+          <div class="creator-name-row">
+            <span class="creator-name">Erin Dugan Jurchak</span>
+            <span class="creator-reach-inline">4.2M+</span>
+          </div>
+          <div class="creator-platform-line">701K IG &bull; 2.8M TT &bull; 661K YT &bull; Duryea, PA</div>
+          <div class="creator-one-liner">TikTok beauty powerhouse. Translates complex skincare trends into accessible, approachable content. Strongest US-based TikTok concentration.</div>
+          <div class="creator-tags">
+            <span class="creator-tag tag-kbeauty">Beauty Expert</span>
+          </div>
+        </div>
+        <div class="expand-toggle">&#9662;</div>
+      </div>
+      <div class="creator-detail">
+        <div class="detail-grid">
+          <div class="detail-section">
+            <h4>About</h4>
+            <p>Former broadcast TV reporter turned leading beauty creator. Erin excels at "let me try this for you" content that builds trust quickly. Her massive TikTok presence and accessible approach make high-performance products feel approachable. Partnered with d'Alba (K-beauty).</p>
+            <h4>Brand History</h4>
+            <p>d'Alba and extensive beauty brand partnerships across skincare, makeup, and haircare categories.</p>
+          </div>
+          <div class="detail-section">
+            <h4>Rate Card</h4>
+            <div class="rate-grid">
+              <div class="rate-item"><div class="rate-platform">IG Reel</div><div class="rate-value">$20,000</div></div>
+              <div class="rate-item"><div class="rate-platform">IG Story Set (3x)</div><div class="rate-value">$5,000</div></div>
+              <div class="rate-item"><div class="rate-platform">TikTok Video</div><div class="rate-value">$35,000</div></div>
+            </div>
+            <div class="bundle-highlight">
+              <div class="bundle-label">Full Short-Form Package</div>
+              <div class="bundle-price">$50,000</div>
+              <div class="bundle-desc">IG Reel + TikTok Video + IG Story Set</div>
+            </div>
+            <div class="rate-note">Pending usage rights and exclusivity terms</div>
+          </div>
+        </div>
+        <div class="links-row">
+          <a href="https://www.instagram.com/erinduganjurchak/" target="_blank">Instagram</a>
+          <a href="https://www.youtube.com/channel/UCePAQws2orUxThrsD6bpxhw" target="_blank">YouTube</a>
+          <a href="https://app.usefoam.com/shared/media-kits/5952af61-532c-4da4-b3dd-cdc90ada6896" target="_blank">Media Kit</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Melinda Melrose -->
+    <div class="creator-card" onclick="this.classList.toggle('open')">
+      <div class="creator-summary">
+        <img class="creator-photo" src="images/creators/melinda-melrose.png" alt="Melinda Melrose">
+        <div class="creator-summary-info">
+          <div class="creator-name-row">
+            <span class="creator-name">Melinda Melrose</span>
+            <span class="creator-reach-inline">3.5M+</span>
+          </div>
+          <div class="creator-platform-line">1.0M IG &bull; 2.4M TT &bull; 72K YT &bull; Los Angeles, CA</div>
+          <div class="creator-one-liner">Netflix personality ("Dated and Related"). CAA-signed. Genuine K-beauty enthusiast who went viral after a brand trip to Seoul.</div>
+          <div class="creator-tags">
+            <span class="creator-tag tag-entertainment">Netflix / CAA</span>
+            <span class="creator-tag tag-kbeauty">K-Beauty Enthusiast</span>
+          </div>
+        </div>
+        <div class="expand-toggle">&#9662;</div>
+      </div>
+      <div class="creator-detail">
+        <div class="detail-grid">
+          <div class="detail-section">
+            <h4>About</h4>
+            <p>Melinda is a content creator and television personality. Known for Netflix's "Too Hot to Handle" and "Dated and Related," her social platforms skyrocketed to 2.5M+ following. Recently signed with CAA. She brings celebrity cachet that extends haruharu wonder beyond the beauty community into pop culture. 37% of her TikTok audience is 18-24, the Target shopper demographic.</p>
+            <h4>Brand History</h4>
+            <p>D'Alba, Laneige, TirTir, Rael. Deep K-beauty brand history with authentic enthusiasm for Korean skincare.</p>
+          </div>
+          <div class="detail-section">
+            <h4>Rate Card</h4>
+            <div style="background: var(--lavender); border-radius: var(--radius); padding: var(--space-md); text-align: center;">
+              <p style="font-size: 0.875rem; color: #6b5b7b; margin: 0;"><strong>Rates pending from CAA representation.</strong><br>We will follow up with Melinda's rate card as soon as it's confirmed.</p>
+            </div>
+          </div>
+        </div>
+        <div class="links-row">
+          <a href="https://www.instagram.com/melinda_melrose/" target="_blank">Instagram</a>
+          <a href="https://www.youtube.com/melindamelrose" target="_blank">YouTube</a>
+          <a href="https://app.usefoam.com/shared/media-kits/3eff3c21-f1a6-4f42-b5f8-939f37281ed7" target="_blank">Media Kit</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- CORE TIER -->
+  <div class="tier-group">
+    <span class="tier-label tier-core">Core Tier</span>
+    <p class="tier-desc">Proven value creators with deep K-beauty credibility and strong audience trust. These are the storytellers who sustain campaign momentum.</p>
+
+    <!-- Demi Ngai -->
+    <div class="creator-card" onclick="this.classList.toggle('open')">
+      <div class="creator-summary">
+        <img class="creator-photo" src="images/creators/demi-ngai.jpg" alt="Demi Ngai">
+        <div class="creator-summary-info">
+          <div class="creator-name-row">
+            <span class="creator-name">Demi Ngai</span>
+            <span class="creator-reach-inline">4.3M+</span>
+          </div>
+          <div class="creator-platform-line">345K IG &bull; 3.5M TT &bull; 423K YT &bull; New York, NY</div>
+          <div class="creator-one-liner">NYC-based beauty creator. Skincare routines to SFX transformations. Worked with TirTir, Torriden, Anua, ma:nyo, and Fwee.</div>
+          <div class="creator-tags">
+            <span class="creator-tag tag-kbeauty">K-Beauty Specialist</span>
+          </div>
+        </div>
+        <div class="expand-toggle">&#9662;</div>
+      </div>
+      <div class="creator-detail">
+        <div class="detail-grid">
+          <div class="detail-section">
+            <h4>About</h4>
+            <p>Demi's content ranges from everyday skincare routines to full SFX makeup transformations. Her unique "shapeshift" style and breathtaking creative editing make her profile cut through the clutter. She knows the K-beauty landscape inside and out with an audience that trusts her product picks deeply.</p>
+            <h4>Brand History</h4>
+            <p>TirTir, Torriden, Anua, ma:nyo, Fwee. One of the deepest K-beauty partnership histories on this roster.</p>
+          </div>
+          <div class="detail-section">
+            <h4>Rate Card</h4>
+            <div class="rate-grid">
+              <div class="rate-item"><div class="rate-platform">IG Reel</div><div class="rate-value">$10,000</div></div>
+              <div class="rate-item"><div class="rate-platform">IG Story Set (3x)</div><div class="rate-value">$6,000&ndash;$7,000</div></div>
+              <div class="rate-item"><div class="rate-platform">TikTok Video</div><div class="rate-value">$16,000</div></div>
+              <div class="rate-item"><div class="rate-platform">YT Shorts</div><div class="rate-value">$10,000</div></div>
+            </div>
+            <div class="bundle-highlight">
+              <div class="bundle-label">Short-Form Syndication</div>
+              <div class="bundle-price">$28,000&ndash;$30,000</div>
+              <div class="bundle-desc">IG Reel + TikTok Video (syndication). With Stories: $33,000</div>
+            </div>
+            <div class="rate-note">Does not create long-form YouTube but does create YouTube Shorts (~$10K range)</div>
+          </div>
+        </div>
+        <div class="links-row">
+          <a href="https://www.instagram.com/demingai/" target="_blank">Instagram</a>
+          <a href="https://www.youtube.com/channel/UCt2zu0YnuecpanyDmhh5M_A" target="_blank">YouTube</a>
+          <a href="https://app.usefoam.com/shared/media-kits/6ef843d3-a8d5-4114-aed2-0e761a6ebe73" target="_blank">Media Kit</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Ambi Yang -->
+    <div class="creator-card" onclick="this.classList.toggle('open')">
+      <div class="creator-summary">
+        <img class="creator-photo" src="images/creators/ambi-yang.jpg" alt="Ambi Yang">
+        <div class="creator-summary-info">
+          <div class="creator-name-row">
+            <span class="creator-name">Ambi Yang</span>
+            <span class="creator-reach-inline">2.2M+</span>
+          </div>
+          <div class="creator-platform-line">1.2M IG &bull; 571K TT &bull; 431K YT &bull; Vancouver, Canada</div>
+          <div class="creator-one-liner">Cinematic storytelling. Premium brand history (MAC, Charlotte Tilbury, SKIMS). Instagram-dominant with editorial production quality.</div>
+          <div class="creator-tags">
+            <span class="creator-tag tag-kbeauty">Premium Beauty</span>
+            <span class="creator-tag tag-inclusive">AAPI Creator</span>
+          </div>
+        </div>
+        <div class="expand-toggle">&#9662;</div>
+      </div>
+      <div class="creator-detail">
+        <div class="detail-grid">
+          <div class="detail-section">
+            <h4>About</h4>
+            <p>Ambi's content feels editorial rather than casual. Strong production value across travel vlogs, GRWM formats, and product spotlights. Her premium brand partnerships (MAC, Charlotte Tilbury, Beauty of Joseon) signal quality alignment. Asian heritage provides natural K-beauty cultural connection.</p>
+            <h4>Brand History</h4>
+            <p>Beauty of Joseon, MAC, Charlotte Tilbury, SKIMS. Strong signal for quality-focused brands.</p>
+          </div>
+          <div class="detail-section">
+            <h4>Rate Card</h4>
+            <div class="rate-grid">
+              <div class="rate-item"><div class="rate-platform">IG Reel</div><div class="rate-value">$20,000</div></div>
+              <div class="rate-item"><div class="rate-platform">IG Story Set (3x)</div><div class="rate-value">$5,000</div></div>
+              <div class="rate-item"><div class="rate-platform">TikTok Video</div><div class="rate-value">$12,000</div></div>
+              <div class="rate-item"><div class="rate-platform">YT :60s Integration</div><div class="rate-value">$7,000</div></div>
+            </div>
+            <div class="bundle-highlight">
+              <div class="bundle-label">Multi-Platform Bundle</div>
+              <div class="bundle-price">$25,000</div>
+              <div class="bundle-desc">Bundled short-form package across platforms</div>
+            </div>
+            <div class="rate-note">Pending usage rights and exclusivity terms</div>
+          </div>
+        </div>
+        <div class="links-row">
+          <a href="https://www.instagram.com/bbyambi/?hl=en" target="_blank">Instagram</a>
+          <a href="https://www.youtube.com/@ambie/videos" target="_blank">YouTube</a>
+          <a href="https://app.usefoam.com/shared/media-kits/04e7c9cf-9215-4f60-94ba-a6d516620e91" target="_blank">Media Kit</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Lena Yeo -->
+    <div class="creator-card" onclick="this.classList.toggle('open')">
+      <div class="creator-summary">
+        <img class="creator-photo" src="images/creators/lena-yeo.jpg" alt="Lena Yeo">
+        <div class="creator-summary-info">
+          <div class="creator-name-row">
+            <span class="creator-name">Lena Yeo</span>
+            <span class="creator-reach-inline">2.0M+</span>
+          </div>
+          <div class="creator-platform-line">311K IG &bull; 356K TT &bull; 1.3M YT &bull; New York, NY</div>
+          <div class="creator-one-liner">Korean American. Wellness + fitness + self-improvement. YouTube-dominant with deep audience trust. NYU media graduate.</div>
+          <div class="creator-tags">
+            <span class="creator-tag tag-korean">Korean-American</span>
+            <span class="creator-tag tag-wellness">Wellness</span>
+          </div>
+        </div>
+        <div class="expand-toggle">&#9662;</div>
+      </div>
+      <div class="creator-detail">
+        <div class="detail-grid">
+          <div class="detail-section">
+            <h4>About</h4>
+            <p>Lena's content spans fitness, skincare, and daily life, unified by intentional self-care. Her Korean American background informs her natural K-beauty connection. YouTube-first (1.3M) delivers long-form storytelling ideal for product education. NYU media background means she understands brand narrative.</p>
+            <h4>Brand History</h4>
+            <p>SKIMS and wellness-aligned partnerships. Korean American heritage creates authentic cultural bridge for K-beauty.</p>
+          </div>
+          <div class="detail-section">
+            <h4>Rate Card</h4>
+            <div class="rate-grid">
+              <div class="rate-item"><div class="rate-platform">IG Reel</div><div class="rate-value">$10,000</div></div>
+              <div class="rate-item"><div class="rate-platform">IG Story Set (3x)</div><div class="rate-value">$7,000</div></div>
+              <div class="rate-item"><div class="rate-platform">TikTok Video</div><div class="rate-value">$10,000</div></div>
+              <div class="rate-item"><div class="rate-platform">YT :60s Integration</div><div class="rate-value">$20,000</div></div>
+              <div class="rate-item"><div class="rate-platform">YT Dedicated</div><div class="rate-value">$50,000</div></div>
+            </div>
+            <div class="bundle-highlight">
+              <div class="bundle-label">Short-Form Syndication</div>
+              <div class="bundle-price">$30,000</div>
+              <div class="bundle-desc">IG Reel + TikTok Video. With Stories: $35,000</div>
+            </div>
+            <div class="rate-note">Pending usage rights and exclusivity terms</div>
+          </div>
+        </div>
+        <div class="links-row">
+          <a href="https://www.instagram.com/lenaliftsx/" target="_blank">Instagram</a>
+          <a href="https://www.youtube.com/@lenalifts/videos" target="_blank">YouTube</a>
+          <a href="https://app.usefoam.com/shared/media-kits/f1db5c04-443e-4846-9354-9fab4bdaa081" target="_blank">Media Kit</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Jen Chae -->
+    <div class="creator-card" onclick="this.classList.toggle('open')">
+      <div class="creator-summary">
+        <img class="creator-photo" src="images/creators/jen-chae.jpg" alt="Jen Chae">
+        <div class="creator-summary-info">
+          <div class="creator-name-row">
+            <span class="creator-name">Jen Chae</span>
+            <span class="creator-reach-inline">1.6M+</span>
+          </div>
+          <div class="creator-platform-line">380K IG &bull; 30K TT &bull; 1.2M YT &bull; Glendale, CA</div>
+          <div class="creator-one-liner">Korean-American K-beauty veteran. 17 years of beauty content. One of the original K-beauty voices on YouTube. Mom of two.</div>
+          <div class="creator-tags">
+            <span class="creator-tag tag-korean">Korean-American</span>
+            <span class="creator-tag tag-kbeauty">17-Year K-Beauty Veteran</span>
+          </div>
+        </div>
+        <div class="expand-toggle">&#9662;</div>
+      </div>
+      <div class="creator-detail">
+        <div class="detail-grid">
+          <div class="detail-section">
+            <h4>About</h4>
+            <p>Jen is a Korean-American beauty and lifestyle creator who has been in this space for 17 years. One of the ORIGINAL K-beauty YouTube voices. Her audience specifically follows her for Korean skincare recommendations. Mom of two adds a relatable dimension that broadens appeal.</p>
+            <h4>Brand History</h4>
+            <p>Etude, Peripera, Colorgram. 17 years of deep K-beauty credibility that's hard to replicate.</p>
+          </div>
+          <div class="detail-section">
+            <h4>Rate Card</h4>
+            <div class="rate-grid">
+              <div class="rate-item"><div class="rate-platform">IG Reel</div><div class="rate-value">$6,000&ndash;$7,000</div></div>
+              <div class="rate-item"><div class="rate-platform">IG Story Set (3x)</div><div class="rate-value">$4,000</div></div>
+              <div class="rate-item"><div class="rate-platform">TikTok Video</div><div class="rate-value">$4,000</div></div>
+              <div class="rate-item"><div class="rate-platform">YT :60s Integration</div><div class="rate-value">$7,000&ndash;$8,000</div></div>
+            </div>
+            <div class="bundle-highlight">
+              <div class="bundle-label">Full 4-Platform Package</div>
+              <div class="bundle-price">$20,000</div>
+              <div class="bundle-desc">IG Reel + TikTok + YouTube Integration + Stories, best value on the roster</div>
+            </div>
+            <div class="rate-note">Pending usage rights and exclusivity terms</div>
+          </div>
+        </div>
+        <div class="links-row">
+          <a href="https://www.instagram.com/frmheadtotoe/" target="_blank">Instagram</a>
+          <a href="https://www.youtube.com/channel/UCecyOxHZpL3yfNFaUz2W_Ow" target="_blank">YouTube</a>
+          <a href="https://app.usefoam.com/shared/media-kits/4148dd9c-c239-4179-ae7d-ee64437c8a3a" target="_blank">Media Kit</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Gabriel Zamora -->
+    <div class="creator-card" onclick="this.classList.toggle('open')">
+      <div class="creator-summary">
+        <img class="creator-photo" src="images/creators/gabriel-zamora.jpg" alt="Gabriel Zamora">
+        <div class="creator-summary-info">
+          <div class="creator-name-row">
+            <span class="creator-name">Gabriel Zamora</span>
+            <span class="creator-reach-inline">1.8M+</span>
+          </div>
+          <div class="creator-platform-line">642K IG &bull; 426K TT &bull; 716K YT &bull; Los Angeles, CA</div>
+          <div class="creator-one-liner">Bilingual (English/Spanish) beauty creator. Gender-inclusive approach. 80% US-based TikTok. "Beauty transcends gender."</div>
+          <div class="creator-tags">
+            <span class="creator-tag tag-inclusive">Bilingual EN/ES</span>
+            <span class="creator-tag tag-inclusive">Inclusive Beauty</span>
+          </div>
+        </div>
+        <div class="expand-toggle">&#9662;</div>
+      </div>
+      <div class="creator-detail">
+        <div class="detail-grid">
+          <div class="detail-section">
+            <h4>About</h4>
+            <p>Gabriel is a proud Latino creator focused on makeup, skincare, fashion, cooking, music, comedy, and traveling. Self-taught makeup artist. His bilingual English/Spanish content opens the Hispanic market, a significant and growing Target shopper segment. 80% US TikTok concentration means highly targeted domestic reach.</p>
+            <h4>Brand History</h4>
+            <p>Kaja Beauty. Self-taught makeup artistry with podcast and merch line.</p>
+          </div>
+          <div class="detail-section">
+            <h4>Rate Card</h4>
+            <div class="rate-grid">
+              <div class="rate-item"><div class="rate-platform">IG Reel</div><div class="rate-value">$10,000</div></div>
+              <div class="rate-item"><div class="rate-platform">IG Story Set (3x)</div><div class="rate-value">$4,000</div></div>
+              <div class="rate-item"><div class="rate-platform">TikTok Video</div><div class="rate-value">$10,000</div></div>
+            </div>
+            <div class="bundle-highlight">
+              <div class="bundle-label">Short-Form Bundle</div>
+              <div class="bundle-price">$15,000</div>
+              <div class="bundle-desc">IG Reel + TikTok Video + IG Story Set</div>
+            </div>
+            <div class="rate-note">Pending usage rights and exclusivity terms</div>
+          </div>
+        </div>
+        <div class="links-row">
+          <a href="https://www.instagram.com/gabrielzamora/" target="_blank">Instagram</a>
+          <a href="https://www.youtube.com/gabrielzamora" target="_blank">YouTube</a>
+          <a href="https://app.usefoam.com/shared/media-kits/3b16be28-4179-4ff0-8d6f-5d64110cbf55" target="_blank">Media Kit</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- DISCOVERY TIER -->
+  <div class="tier-group">
+    <span class="tier-label tier-discovery">Discovery Tier</span>
+    <p class="tier-desc">Emerging voices with exceptional engagement rates and community trust. Maximum cost efficiency with authentic audience connection.</p>
+
+    <!-- Hira Mustafa -->
+    <div class="creator-card" onclick="this.classList.toggle('open')">
+      <div class="creator-summary">
+        <img class="creator-photo" src="images/creators/hira-mustafa.jpg" alt="Hira Mustafa">
+        <div class="creator-summary-info">
+          <div class="creator-name-row">
+            <span class="creator-name">Hira Mustafa</span>
+            <span class="creator-reach-inline">502K+</span>
+          </div>
+          <div class="creator-platform-line">168K IG &bull; 334K TT &bull; New York, NY</div>
+          <div class="creator-one-liner">Pakistani-American beauty creator + law graduate (J.D.). Celebrates multicultural beauty with intelligent, ingredient-conscious content.</div>
+          <div class="creator-tags">
+            <span class="creator-tag tag-inclusive">Multicultural</span>
+            <span class="creator-tag tag-kbeauty">Beauty + Intelligence</span>
+          </div>
+        </div>
+        <div class="expand-toggle">&#9662;</div>
+      </div>
+      <div class="creator-detail">
+        <div class="detail-grid">
+          <div class="detail-section">
+            <h4>About</h4>
+            <p>Hira blends her passion for beauty with her journey as a law graduate. Her J.D. signals quality and discernment to her audience. Pakistani-American heritage adds multicultural diversity to the campaign roster. TikTok-first (334K) delivers strong engagement in beauty discovery. NYC base aligns with Target's urban retail footprint.</p>
+          </div>
+          <div class="detail-section">
+            <h4>Rate Card</h4>
+            <div class="rate-grid">
+              <div class="rate-item"><div class="rate-platform">IG Reel</div><div class="rate-value">$6,000</div></div>
+              <div class="rate-item"><div class="rate-platform">IG Story Set (3x)</div><div class="rate-value">$2,000</div></div>
+              <div class="rate-item"><div class="rate-platform">TikTok Video</div><div class="rate-value">$8,000</div></div>
+            </div>
+            <div class="bundle-highlight">
+              <div class="bundle-label">Full Short-Form Package</div>
+              <div class="bundle-price">$14,000</div>
+              <div class="bundle-desc">IG Reel + TikTok Video + IG Story Set</div>
+            </div>
+            <div class="rate-note">Pending usage rights and exclusivity terms</div>
+          </div>
+        </div>
+        <div class="links-row">
+          <a href="https://www.instagram.com/lookwhoshira/?hl=en" target="_blank">Instagram</a>
+          <a href="https://app.usefoam.com/shared/media-kits/ec3e8164-1985-40d0-8807-f09dea27c77f" target="_blank">Media Kit</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Hope Gainer -->
+    <div class="creator-card" onclick="this.classList.toggle('open')">
+      <div class="creator-summary">
+        <img class="creator-photo" src="images/creators/hope-gainer.jpg" alt="Hope Gainer">
+        <div class="creator-summary-info">
+          <div class="creator-name-row">
+            <span class="creator-name">Hope Gainer</span>
+            <span class="creator-reach-inline">High Engagement</span>
+          </div>
+          <div class="creator-platform-line">IG + TT &bull; Exceptionally high engagement rates on both platforms</div>
+          <div class="creator-one-liner">Beauty creator with the highest engagement rate on this roster. Authentic, community-driven content that converts followers into buyers.</div>
+          <div class="creator-tags">
+            <span class="creator-tag tag-kbeauty">High Engagement</span>
+          </div>
+        </div>
+        <div class="expand-toggle">&#9662;</div>
+      </div>
+      <div class="creator-detail">
+        <div class="detail-grid">
+          <div class="detail-section">
+            <h4>About</h4>
+            <p>Hope's engagement rates on both Instagram and TikTok exceed typical benchmarks for her tier. In creator marketing, engagement rate often matters more than raw follower count for driving conversions. With haruharu wonder products available on both Amazon and Target, converting engaged followers into buyers is the ultimate metric.</p>
+          </div>
+          <div class="detail-section">
+            <h4>Rate Card</h4>
+            <div class="rate-grid">
+              <div class="rate-item"><div class="rate-platform">IG Reel</div><div class="rate-value">$5,000</div></div>
+              <div class="rate-item"><div class="rate-platform">IG Story Set (3x)</div><div class="rate-value">$2,000</div></div>
+              <div class="rate-item"><div class="rate-platform">TikTok Video</div><div class="rate-value">$5,000</div></div>
+            </div>
+            <div class="bundle-highlight">
+              <div class="bundle-label">Full Short-Form Package</div>
+              <div class="bundle-price">$10,000</div>
+              <div class="bundle-desc">IG Reel + TikTok Video + IG Story Set, best cost-per-engagement on the roster</div>
+            </div>
+            <div class="rate-note">Pending usage rights and exclusivity terms. Very high engagement rate on IG &amp; TT.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION: SEEDING -->
+<section id="seeding">
+  <div class="section-eyebrow">Gifting &amp; PR Seeding</div>
+  <h2>Extending the <em>wave</em></h2>
+  <p class="section-lead">
+    Beyond the 12 paid creators, we recommend a PR seeding layer for the NAD+ Mist specifically. Send product to micro and nano creators in wellness, fitness, and K-beauty review spaces. If they post organically, they become candidates for paid amplification in Q3. This is how you turn a campaign into a movement.
+  </p>
+  <div class="insight">
+    <p><strong>Why seeding works here:</strong> The NAD+ Mist is a $22 product that's genuinely easy to integrate into any routine: spray and go. It doesn't require a 10-step tutorial. Health and wellness creators who have never touched K-beauty can still feature it naturally. The barrier to organic content is almost zero.</p>
+  </div>
+  <h3 style="margin-top: var(--space-lg);">Recommended Seeding Categories</h3>
+  <div class="seeding-grid">
+    <div class="seeding-card">
+      <div class="seed-name">Health &amp; Wellness Creators</div>
+      <div class="seed-reach">Select's wellness roster</div>
+      <div class="seed-desc">NAD+ is already a wellness supplement trend. Fitness and wellness creators can position the Mist as "skincare meets biohacking," the topical version of what they already advocate for internally.</div>
+    </div>
+    <div class="seeding-card">
+      <div class="seed-name">K-Beauty Review Accounts</div>
+      <div class="seed-reach">TikTok &amp; Instagram micro-influencers</div>
+      <div class="seed-desc">Dedicated K-beauty review accounts with 10K-100K followers. They already cover haruharu wonder's competitors. The NAD+ Mist is genuinely new news in this space.</div>
+    </div>
+    <div class="seeding-card">
+      <div class="seed-name">Dermatologist / Esthetician Creators</div>
+      <div class="seed-reach">Clinical credibility layer</div>
+      <div class="seed-desc">Skincare professionals who review ingredients. NAD+ has legitimate science behind it. Professional endorsement adds a credibility layer that complements the creator campaign.</div>
+    </div>
+    <div class="seeding-card">
+      <div class="seed-name">AAPI Lifestyle Creators</div>
+      <div class="seed-reach">Cultural resonance</div>
+      <div class="seed-desc">AAPI lifestyle creators across fashion, food, and culture who naturally integrate K-beauty into their content. Authentic cultural connection without being beauty-specific.</div>
+    </div>
+  </div>
+  <p style="font-size:0.875rem; color:var(--text-muted); margin-top:var(--space-md);">We can share a curated seeding list with specific creator recommendations from Select's roster upon request. We also have dedicated <a href="#" style="color:var(--deep-teal)">Beauty</a>, <a href="#" style="color:var(--deep-teal)">AAPI Talent</a>, and <a href="#" style="color:var(--deep-teal)">Health &amp; Wellness</a> rosters for additional exploration.</p>
+</section>
+
+<!-- SECTION: CAMPAIGN FLIGHTS -->
+<section id="flights">
+  <div class="section-eyebrow">Campaign Flights</div>
+  <h2>Five stories, <em>one wave</em></h2>
+  <p class="section-lead">
+    Rather than booking creators individually, we propose organizing the campaign into thematic flights. Each flight tells a distinct story while building toward a collective "Brand Family" wave across Q2 and Q3. Creators can appear in multiple flights.
+  </p>
+
+  <div class="flights-grid">
+    <div class="flight-card flight-science">
+      <div class="flight-number">01</div>
+      <h4>"The NAD+ Effect": Science Innovation Launch</h4>
+      <span class="flight-product-tag fpt-mist">NAD+ Mist</span>
+      <p>Position the campaign at the intersection of longevity science and K-beauty. Creators explain NAD+ to their audiences: the same molecule celebrities pay $500+ per IV drip session for, now in a $22 mist. Lead with the science, land with the product.</p>
+      <div class="flight-hook">"Hailey Bieber spends $500 on NAD+ drips. This K-beauty brand put it in a $22 mist."</div>
+      <div class="flight-creators">Lead creators: Miki Rai (RN credibility) &bull; Michelle Choi (lifestyle authority) &bull; Lena Yeo (wellness bridge)</div>
+    </div>
+
+    <div class="flight-card flight-retail">
+      <div class="flight-number">02</div>
+      <h4>"Target Run Treasure": Retail Discovery</h4>
+      <span class="flight-product-tag fpt-essence">Barrier Essence</span>
+      <p>The organic Target discovery moment. Creator finds haruharu wonder on the K-beauty shelf, tries it, and it becomes a staple. "Come shopping with me" format drives foot traffic and makes the purchase moment feel like an adventure, not an ad.</p>
+      <div class="flight-hook">"Found this award-winning K-beauty essence at Target for under $30 and my skin has never been this hydrated."</div>
+      <div class="flight-creators">Lead creators: Heart Defensor (lifestyle + beauty) &bull; Erin Dugan Jurchak (TikTok reach) &bull; Hope Gainer (high engagement)</div>
+    </div>
+
+    <div class="flight-card flight-ritual">
+      <div class="flight-number">03</div>
+      <h4>"Day by Day": The Collective Ritual</h4>
+      <span class="flight-product-tag fpt-both">Both Products</span>
+      <p>"haruharu" means "day by day" in Korean. Build a collective content series where each creator shows their daily ritual incorporating both products. Morning: Barrier Essence as hydration base. Midday: NAD+ Mist refresh. Creates unified campaign aesthetic while allowing individual storytelling.</p>
+      <div class="flight-hook">"Day by day, your skin gets better. Here's my haruharu ritual."</div>
+      <div class="flight-creators">All 12 creators &bull; Shared hashtag: #myharuharuritual &bull; Staggered rollout per timeline</div>
+    </div>
+
+    <div class="flight-card flight-heritage">
+      <div class="flight-number">04</div>
+      <h4>"Heritage Stories": Korean Beauty Culture</h4>
+      <span class="flight-product-tag fpt-both">Both Products</span>
+      <p>Three Korean-American creators share personal stories about K-beauty in their lives: how they grew up with Korean skincare rituals, why these products feel like home, what it means to see K-beauty at Target. Generational storytelling that creates emotional connection beyond product features.</p>
+      <div class="flight-hook">"My mom's skincare shelf had three products. Mine has haruharu wonder."</div>
+      <div class="flight-creators">Lead creators: Michelle Choi &bull; Jen Chae (17-year K-beauty veteran) &bull; Lena Yeo (Korean-American wellness)</div>
+    </div>
+
+    <div class="flight-card flight-inclusive">
+      <div class="flight-number">05</div>
+      <h4>"Beauty Without Boundaries": Inclusive Beauty</h4>
+      <span class="flight-product-tag fpt-both">Both Products</span>
+      <p>K-beauty is for everyone. Gabriel brings bilingual English/Spanish content opening the Hispanic market. Hira celebrates Pakistani-American beauty with K-beauty integration. Heart bridges Filipina American and K-beauty communities. haruharu wonder's "for everyone" positioning comes alive through diverse voices.</p>
+      <div class="flight-hook">"La belleza coreana es para todos. Korean beauty is for everyone."</div>
+      <div class="flight-creators">Lead creators: Gabriel Zamora (bilingual) &bull; Hira Mustafa (multicultural) &bull; Heart Defensor (Filipina American)</div>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION: MARKETING BUNDLES -->
+<section id="bundles">
+  <div class="section-eyebrow">Marketing Bundles</div>
+  <h2>Curated <em>packages</em></h2>
+  <p class="section-lead">
+    Beyond individual bookings, we've designed multi-creator packages that align with the campaign flights. Each bundle is priced from our rate cards and optimized for maximum impact per dollar.
+  </p>
+
+  <!-- Featured Bundle -->
+  <div class="bundle-card bundle-featured">
+    <h4>"K-Beauty Authority" Bundle</h4>
+    <div class="bundle-total">$78,000&ndash;$98,000</div>
+    <div class="bundle-meta" style="color:rgba(219,231,232,0.5);">3 Creators &bull; 8.9M Combined Reach &bull; All Platforms</div>
+    <p>Three creators with the deepest K-beauty partnership histories on this roster. Combined, they deliver the most credible voices in the space. This is the foundation of any haruharu wonder campaign.</p>
+    <div class="bundle-creator-list">
+      <strong style="color:var(--lime);">Demi Ngai</strong> ($28&ndash;$33K syndication bundle) +
+      <strong style="color:var(--lime);">Michelle Choi</strong> ($30&ndash;$40K short-form) +
+      <strong style="color:var(--lime);">Jen Chae</strong> ($20K full 4-platform package)
+    </div>
+  </div>
+
+  <div class="bundle-card">
+    <h4>"NAD+ Science Launch" Bundle</h4>
+    <div class="bundle-total">$78,000&ndash;$93,000</div>
+    <div class="bundle-meta">3 Creators &bull; Science-Led &bull; NAD+ Mist Hero</div>
+    <p>Science-first launch for the NAD+ Mist. Miki's RN background explains the biology. Jen brings 17 years of K-beauty credibility. Hira adds multicultural reach and ingredient-conscious appeal.</p>
+    <div class="bundle-creator-list">
+      <strong>Miki Rai</strong> ($55&ndash;$65K short-form bundle) +
+      <strong>Jen Chae</strong> ($20K full package) +
+      <strong>Hira Mustafa</strong> ($14K full package)
+    </div>
+  </div>
+
+  <div class="bundle-card">
+    <h4>"Target Run" Bundle</h4>
+    <div class="bundle-total">$85,000&ndash;$110,000</div>
+    <div class="bundle-meta">4 Creators &bull; TikTok-First &bull; Barrier Essence at Target</div>
+    <p>Drive Target foot traffic for the Barrier Essence. Heart and Erin deliver massive TikTok virality. Hope and Hira bring high engagement and community trust at efficient price points.</p>
+    <div class="bundle-creator-list">
+      <strong>Heart Defensor</strong> ($25&ndash;$30K) +
+      <strong>Erin Dugan Jurchak</strong> ($50K) +
+      <strong>Hope Gainer</strong> ($10K) +
+      <strong>Hira Mustafa</strong> ($14K)
+    </div>
+  </div>
+
+  <div class="bundle-card">
+    <h4>"Discovery Engine" Bundle</h4>
+    <div class="bundle-total">$39,000</div>
+    <div class="bundle-meta">3 Creators &bull; Highest Efficiency &bull; Inclusive Beauty</div>
+    <p>Maximum cost efficiency with diverse voices. Gabriel opens the bilingual market, Hira brings multicultural appeal, Hope delivers the best cost-per-engagement on the entire roster. All three together cost less than one premium creator.</p>
+    <div class="bundle-creator-list">
+      <strong>Gabriel Zamora</strong> ($15K) +
+      <strong>Hira Mustafa</strong> ($14K) +
+      <strong>Hope Gainer</strong> ($10K)
+    </div>
+  </div>
+
+  <div class="bundle-card">
+    <h4>"Wellness Bridge" Bundle</h4>
+    <div class="bundle-total">$110,000&ndash;$130,000</div>
+    <div class="bundle-meta">3 Creators &bull; Full-Funnel &bull; YouTube Depth</div>
+    <p>Wellness-meets-beauty narrative with YouTube depth for long-form product education. Miki brings healthcare credibility, Lena bridges wellness and K-beauty culture, Ambi delivers premium aesthetics.</p>
+    <div class="bundle-creator-list">
+      <strong>Miki Rai</strong> ($55&ndash;$65K) +
+      <strong>Lena Yeo</strong> ($30&ndash;$35K short-form) +
+      <strong>Ambi Yang</strong> ($25&ndash;$30K)
+    </div>
+  </div>
+
+  <div class="insight">
+    <p><strong>Mix and match:</strong> These bundles are building blocks, not fixed packages. Combine elements: pair the "K-Beauty Authority" foundation with the "Discovery Engine" for a $117&ndash;$137K campaign covering 6 creators across every audience. Or layer the "NAD+ Science Launch" with the "Target Run" for a dual-product strategy at $163&ndash;$203K.</p>
+  </div>
+</section>
+
+<!-- SECTION: INVESTMENT SCENARIOS -->
+<section id="investment">
+  <div class="section-eyebrow">Investment Scenarios</div>
+  <h2>Three paths <em>forward</em></h2>
+  <p class="section-lead">
+    Each scenario is designed to deliver meaningful results at its investment level. All pricing includes multi-platform content across Instagram, TikTok, and select YouTube activations.
+  </p>
+
+  <div class="scenario-card scenario-1">
+    <div class="scenario-header">
+      <div>
+        <h3>Focused Q2 Launch</h3>
+        <div class="scenario-label">4&ndash;5 Creators &bull; Short-Form Focus</div>
+      </div>
+      <div class="scenario-amount">$100K&ndash;$150K</div>
+    </div>
+    <ul>
+      <li>1 Premium anchor (Michelle Choi or Miki Rai) sets the campaign tone</li>
+      <li>2 Core creators (Demi Ngai + Jen Chae) sustain K-beauty credibility</li>
+      <li>1&ndash;2 Discovery creators (Hira + Hope) drive engagement efficiently</li>
+      <li>Short-form syndication packages across IG + TT + Stories</li>
+      <li>Ideal for testing the partnership and building a content library before scaling</li>
+    </ul>
+  </div>
+
+  <div class="scenario-card scenario-2">
+    <div class="scenario-header">
+      <div>
+        <h3>Full Brand Wave</h3>
+        <div class="scenario-label">All 12 Creators &bull; Multi-Platform &bull; Q2 + Q3</div>
+      </div>
+      <div class="scenario-amount">$300K&ndash;$400K</div>
+    </div>
+    <ul>
+      <li>All Premium tier creators with multi-platform packages</li>
+      <li>All Core tier creators with short-form syndication bundles</li>
+      <li>All Discovery tier creators for engagement and diversity</li>
+      <li>Staggered rollout: Q2 launch wave, Q3 sustain wave</li>
+      <li>Select YouTube integrations from Miki Rai and Lena Yeo for deep product education</li>
+      <li>Maximum reach (36M+), unified campaign moment, content library for paid amplification</li>
+    </ul>
+  </div>
+
+  <div class="scenario-card scenario-3">
+    <div class="scenario-header">
+      <div>
+        <h3 style="color:var(--lime);">Phased Build</h3>
+        <div class="scenario-label" style="color:rgba(219,231,232,0.5);">6 Creators Q2 &rarr; 10&ndash;12 Q3 &bull; Data-Driven Scaling</div>
+      </div>
+      <div class="scenario-amount">$400K&ndash;$500K</div>
+    </div>
+    <ul>
+      <li><strong style="color:var(--lime);">Q2 Phase ($150&ndash;$200K):</strong> 2 Premium anchors + 2 Core + 2 Discovery</li>
+      <li><strong style="color:var(--lime);">Q3 Phase ($200&ndash;$300K):</strong> Add remaining creators, upgrade top Q2 performers</li>
+      <li>Q2 data de-risks Q3 spend: scale what works, adjust what doesn't</li>
+      <li>Multi-quarter commitment is the strongest negotiation lever for bundle pricing</li>
+      <li>Builds toward an always-on creator program ("Brand Family" vision)</li>
+      <li>YouTube Dedicated content in Q3 (Miki Rai, Lena Yeo) after Q2 proves product-market fit</li>
+    </ul>
+  </div>
+</section>
+
+<!-- SECTION: TIMELINE -->
+<section id="timeline">
+  <div class="section-eyebrow">Campaign Timeline</div>
+  <h2>Q2/Q3 <em>flight plan</em></h2>
+  <p class="section-lead">
+    A suggested content cadence that creates sustained visibility across both quarters. Premium anchors launch the wave, Core tier sustains momentum, Discovery tier drives engagement, and seeding runs throughout.
+  </p>
+
+  <div class="timeline-grid">
+    <!-- Header row -->
+    <div class="tl-header"></div>
+    <div class="tl-header">Apr<br>W1</div>
+    <div class="tl-header">Apr<br>W2</div>
+    <div class="tl-header">Apr<br>W3</div>
+    <div class="tl-header">Apr<br>W4</div>
+    <div class="tl-header">May<br>W1</div>
+    <div class="tl-header">May<br>W2</div>
+    <div class="tl-header">May<br>W3</div>
+    <div class="tl-header">May<br>W4</div>
+    <div class="tl-header">Jun<br>W1</div>
+    <div class="tl-header">Jun<br>W2</div>
+    <div class="tl-header">Jul+</div>
+    <div class="tl-header">Q3</div>
+
+    <!-- Premium Tier -->
+    <div class="tl-label">Premium</div>
+    <div class="tl-cell tl-active-strong">LAUNCH</div>
+    <div class="tl-cell tl-active-strong">LAUNCH</div>
+    <div class="tl-cell tl-active">Stories</div>
+    <div class="tl-cell tl-active">Stories</div>
+    <div class="tl-cell"></div>
+    <div class="tl-cell"></div>
+    <div class="tl-cell"></div>
+    <div class="tl-cell"></div>
+    <div class="tl-cell"></div>
+    <div class="tl-cell"></div>
+    <div class="tl-cell tl-active">Wave 2</div>
+    <div class="tl-cell tl-active-strong">SCALE</div>
+
+    <!-- Core Tier -->
+    <div class="tl-label">Core</div>
+    <div class="tl-cell"></div>
+    <div class="tl-cell"></div>
+    <div class="tl-cell tl-active-strong">SUSTAIN</div>
+    <div class="tl-cell tl-active-strong">SUSTAIN</div>
+    <div class="tl-cell tl-active">Stories</div>
+    <div class="tl-cell tl-active">Stories</div>
+    <div class="tl-cell"></div>
+    <div class="tl-cell"></div>
+    <div class="tl-cell"></div>
+    <div class="tl-cell"></div>
+    <div class="tl-cell tl-active">Wave 2</div>
+    <div class="tl-cell tl-active-strong">SCALE</div>
+
+    <!-- Discovery Tier -->
+    <div class="tl-label">Discovery</div>
+    <div class="tl-cell"></div>
+    <div class="tl-cell"></div>
+    <div class="tl-cell"></div>
+    <div class="tl-cell"></div>
+    <div class="tl-cell tl-active-strong">ENGAGE</div>
+    <div class="tl-cell tl-active-strong">ENGAGE</div>
+    <div class="tl-cell tl-active">Stories</div>
+    <div class="tl-cell"></div>
+    <div class="tl-cell"></div>
+    <div class="tl-cell"></div>
+    <div class="tl-cell tl-active">Wave 2</div>
+    <div class="tl-cell tl-active">Expand</div>
+
+    <!-- PR Seeding -->
+    <div class="tl-label">PR Seeding</div>
+    <div class="tl-cell tl-seeding">SEED</div>
+    <div class="tl-cell tl-seeding">SEED</div>
+    <div class="tl-cell tl-seeding">SEED</div>
+    <div class="tl-cell tl-seeding">SEED</div>
+    <div class="tl-cell tl-seeding">SEED</div>
+    <div class="tl-cell tl-seeding">SEED</div>
+    <div class="tl-cell tl-seeding">SEED</div>
+    <div class="tl-cell tl-seeding">SEED</div>
+    <div class="tl-cell tl-seeding">SEED</div>
+    <div class="tl-cell tl-seeding">SEED</div>
+    <div class="tl-cell tl-seeding">SEED</div>
+    <div class="tl-cell tl-seeding">SEED</div>
+
+    <!-- Flights -->
+    <div class="tl-label">Flights</div>
+    <div class="tl-cell tl-active" style="grid-column: span 2; background:var(--lime); color:var(--deep-teal);">NAD+ Effect</div>
+    <div class="tl-cell tl-active" style="grid-column: span 2; background:var(--sage); color:var(--deep-teal);">Target Run</div>
+    <div class="tl-cell tl-active" style="grid-column: span 4; background:var(--lavender); color:#6b5b7b;">Day by Day Ritual</div>
+    <div class="tl-cell tl-active" style="grid-column: span 2; background:var(--pink-accent); color:#5a3a4a;">Heritage</div>
+    <div class="tl-cell tl-active" style="grid-column: span 2; background:#fef3e2; color:#8a6b3a;">Inclusive</div>
+  </div>
+
+  <div class="insight" style="margin-top:var(--space-lg);">
+    <p><strong>Six weeks of content cadence from a single Q2 buy.</strong> This staggered approach means haruharu wonder has continuous creator-driven visibility from April through June, without requiring all creators to post simultaneously. Each week brings a new voice and a new angle.</p>
+  </div>
+</section>
+
+<!-- SECTION: NEXT STEPS -->
+<section id="next">
+  <div class="section-eyebrow">Next Steps</div>
+  <h2>Let's build <em>together</em></h2>
+  <p class="section-lead">
+    We're excited about the potential of this partnership. Here's what we'd recommend as immediate next steps following today's conversation.
+  </p>
+
+  <ol class="next-steps-list">
+    <li><strong>Confirm Q2 budget and investment scenario.</strong> Which path resonates: Focused Launch, Full Wave, or Phased Build? This drives everything that follows.</li>
+    <li><strong>Select priority creators for Q2 activation.</strong> We recommend starting with 4&ndash;6 creators. We can share shortlisted bundles based on your preferred scenario.</li>
+    <li><strong>Share product samples and campaign briefs with creator teams.</strong> Once creators are selected, we'll coordinate product delivery and brief distribution with their managers.</li>
+    <li><strong>Confirm deliverable specs and content approval process.</strong> Platforms, formats, posting cadence, hashtags, brand guidelines, and any exclusivity windows.</li>
+    <li><strong>Set NAD+ Mist PR seeding in motion.</strong> We can begin identifying and shipping to seeding-tier creators immediately, this runs parallel to paid activation planning.</li>
+    <li><strong>Schedule follow-up call for creator confirmations.</strong> Target: within 2 weeks to lock in Q2 wave with confirmed creators and timelines.</li>
+  </ol>
+</section>
+
+</main>
+
+<!-- FOOTER -->
+<footer>
+  <p><strong>haruharu wonder x Select Management</strong> | Campaign Strategy Q2/Q3 2026</p>
+  <p style="margin-top:8px;">Prepared by Tom Nwachuku, Brand Partnerships &bull; <a href="mailto:tom.partners@select.co" style="color:var(--lime);">tom.partners@select.co</a> &bull; (310) 874-4886</p>
+  <p style="margin-top:8px; font-size:0.625rem; opacity:0.5;">Simple. Gentle. Effective. Day by day.</p>
+</footer>
+
+
+<script>
+async function unlock(e) {
+  e.preventDefault();
+  const pw = document.getElementById('pw').value.toLowerCase().trim();
+  const valid = ['haruharu', 'haruharuwonder', 'haruharu wonder', 'wonder', 'select2026'].includes(pw);
+  if (valid) {
+    document.getElementById('gate').classList.add('unlocked');
+    setTimeout(() => document.getElementById('gate').remove(), 600);
+    sessionStorage.setItem('hhw_auth', '1');
+  } else {
+    document.getElementById('gate-error').textContent = 'Try again.';
+    document.getElementById('pw').value = '';
+    document.getElementById('pw').focus();
+  }
+  return false;
+}
+if (sessionStorage.getItem('hhw_auth') === '1') {
+  document.getElementById('gate').remove();
+}
+</script>
+
+</body>
+</html>
